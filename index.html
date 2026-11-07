@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173d32">
+<title>MemberShare | Local businesses. Everyday savings.</title>
+<style>
+:root{--green:#173d32;--green2:#245844;--gold:#d9b66d;--cream:#f7f5ef;--ink:#1e2924;--muted:#66736b;--line:#e4e7e1;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+header{background:var(--green);color:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid #ffffff20}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-size:1.65rem;font-weight:700;letter-spacing:.2px;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}nav a{text-decoration:none;font-size:.94rem;color:#edf3ed}nav a:hover{text-decoration:underline}
+.nav .navcta{background:var(--gold);color:#192c22;padding:9px 15px;border-radius:7px;font-weight:700}
+.hero{background:linear-gradient(120deg,#173d32,#245844);color:#fff;padding:78px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:700;color:#e8cf9b}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.15}h1{font-size:clamp(2.5rem,6vw,4.35rem);margin:14px 0 18px;max-width:720px}
+.hero p{font-size:1.12rem;color:#e8eee9;max-width:640px}
+.hero-card{background:#fff;color:var(--ink);padding:28px;border-radius:15px;box-shadow:0 18px 55px #0a241b55}
+.hero-card h2{font-size:1.65rem;margin:0 0 12px}.hero-card p{color:var(--muted);font-size:.98rem}
+.pill{display:inline-block;background:#e8f1e9;color:#245844;border-radius:99px;padding:5px 11px;font-size:.78rem;font-weight:700}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:8px;background:var(--gold);color:#1d2d23;font-weight:750;padding:13px 19px;cursor:pointer;font:inherit}
+.btn.dark{background:var(--green);color:#fff}.btn.outline{background:transparent;border:1px solid #b9c7bd;color:var(--green)}
+section{padding:68px 0}.section-soft{background:var(--cream)}.section-head{max-width:720px;margin-bottom:32px}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin:0 0 14px;color:var(--green)}.section-head p{color:var(--muted);font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:13px;padding:23px;background:#fff}
+.card .symbol{font-size:1.5rem}.card h3{font-size:1.25rem;margin:10px 0 7px}.card p{color:var(--muted);margin:0}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.step{counter-increment:step;border-top:3px solid var(--gold);padding:15px 8px 0}.step:before{content:counter(step);display:inline-grid;place-items:center;background:var(--green);color:#fff;width:30px;height:30px;border-radius:50%;font-weight:700;margin-bottom:12px}.step h3{font-size:1.08rem;margin:0 0 7px}.step p{font-size:.91rem;color:var(--muted);margin:0}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.offer{background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px}.offer strong{display:block;color:var(--green);margin-bottom:5px}.offer small{color:var(--muted)}
+.notice{background:#f5efdf;border-left:4px solid var(--gold);padding:17px 20px;border-radius:5px;color:#51452e}
+.form-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px;box-shadow:0 8px 28px #10291b0c}
+label{display:block;font-weight:650;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cfd8d0;border-radius:7px;font:inherit;background:#fff;color:var(--ink)}
+textarea{min-height:95px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid #d9b66d66;border-color:#9a7b3f}
+form button{width:100%;margin-top:18px}
+.form-note{font-size:.82rem;color:var(--muted)}
+#formResult{display:none;margin-top:15px;padding:14px;background:#e8f1e9;border-radius:8px;color:#214b35;white-space:pre-wrap}
+.faq{max-width:800px}.faq details{border-bottom:1px solid var(--line);padding:16px 0}.faq summary{font-weight:700;cursor:pointer;color:var(--green)}.faq p{color:var(--muted);margin-bottom:0}
+footer{background:#112d24;color:#e6eee8;padding:35px 0}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer p{color:#bdc9c0;font-size:.9rem}
+.small{font-size:.86rem;color:var(--muted)}
+@media(max-width:760px){.hero-grid,.form-layout{grid-template-columns:1fr}.hero{padding:55px 0}.cards,.offer-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}nav{gap:11px}nav a:not(.navcta){display:none}.nav{min-height:64px}}
+@media(max-width:420px){.steps{grid-template-columns:1fr}.wrap{width:min(100% - 30px,1100px)}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home">MemberShare</a>
+  <nav aria-label="Main navigation">
+   <a href="#how">How it works</a><a href="#offers">Offer ideas</a><a href="#members">For members</a>
+   <a class="navcta" href="#apply">For businesses</a>
+  </nav>
+ </div>
+</header>
+<main id="home">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">A local savings network</div>
+   <h1>Local businesses.<br>Everyday savings.</h1>
+   <p>MemberShare brings people and neighborhood businesses together through useful, straightforward offers on everyday purchases and services.</p>
+   <a class="btn" href="#apply">Explore business participation</a>
+  </div>
+  <div class="hero-card">
+   <span class="pill">For independent businesses</span>
+   <h2>Your business. Your offer. Your decision.</h2>
+   <p>Propose a special offer that makes sense for your business. You choose the terms, and you can review everything before agreeing to participate.</p>
+   <p><strong>No upfront merchant fee.</strong><br><strong>No monthly merchant participation fee.</strong></p>
+   <a class="btn dark" href="#apply">Propose an offer</a>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow" style="color:#98763b">Why MemberShare</div><h2>A practical partnership, built around local value.</h2>
+   <p>We want participating businesses to feel that the arrangement is clear, voluntary, and worthwhile—not another complicated marketing program.</p>
+  </div>
+  <div class="cards">
+   <article class="card"><div class="symbol">🤝</div><h3>Voluntary participation</h3><p>Review the program and proposed terms before deciding whether to take part.</p></article>
+   <article class="card"><div class="symbol">⚙️</div><h3>You control the offer</h3><p>Choose the discount, eligible items, exclusions, and redemption conditions.</p></article>
+   <article class="card"><div class="symbol">📍</div><h3>Local connection</h3><p>Introduce your business to members looking for useful ways to save in their community.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section-soft" id="how">
+ <div class="wrap">
+  <div class="section-head"><h2>How business participation works</h2><p>A simple process, with no obligation to proceed until you have reviewed the details.</p></div>
+  <div class="steps">
+   <div class="step"><h3>Learn</h3><p>Read about MemberShare and how the membership works.</p></div>
+   <div class="step"><h3>Propose</h3><p>Tell us about your business and the offer you have in mind.</p></div>
+   <div class="step"><h3>Review</h3><p>We discuss the offer, conditions, and practical details with you.</p></div>
+   <div class="step"><h3>Approve</h3><p>You review and agree to written participation terms.</p></div>
+   <div class="step"><h3>Welcome members</h3><p>Your approved offer can be published for members to use.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="offers">
+ <div class="wrap">
+  <div class="section-head"><h2>What could your offer look like?</h2><p>There is no one-size-fits-all discount. Choose an offer that fits your margins, inventory, and business goals.</p></div>
+  <div class="offer-grid">
+   <div class="offer"><strong>10% off selected purchases</strong><small>For a retailer or specialty shop</small></div>
+   <div class="offer"><strong>Complimentary item with purchase</strong><small>For a café or restaurant</small></div>
+   <div class="offer"><strong>$5 off a qualifying service</strong><small>For a barber or service provider</small></div>
+   <div class="offer"><strong>Special first-visit price</strong><small>For a local service business</small></div>
+   <div class="offer"><strong>Discount on labor</strong><small>For an automotive business</small></div>
+   <div class="offer"><strong>Customer appreciation offer</strong><small>For a business building repeat visits</small></div>
+  </div>
+  <p class="small">These are examples only, not current offers or commitments from any business.</p>
+ </div>
+</section>
+
+<section class="section-soft" id="members">
+ <div class="wrap">
+  <div class="section-head"><h2>For people who want their local spending to go further.</h2><p>MemberShare is being developed as a paid membership that gives members access to participating business offers. The working membership price is $19.99 per month; final terms and launch details will be published before enrollment opens.</p></div>
+  <div class="notice"><strong>Our standard:</strong> Offers should be clear, genuinely usable, and valuable enough that members can make an informed decision about whether membership is worthwhile. We will not promise savings that have not been verified.</div>
+ </div>
+</section>
+
+<section id="apply">
+ <div class="wrap form-layout">
+  <div>
+   <div class="eyebrow" style="color:#98763b">Start a conversation</div>
+   <h2>Tell us about your business.</h2>
+   <p>Share a few details and a possible offer. This is an expression of interest—not a binding agreement and not an automatic enrollment.</p>
+   <p><strong>No fee to submit an inquiry.</strong> We will review the proposal and discuss the details before any offer is published.</p>
+   <p class="small">At this prototype stage, the form does not send information to MemberShare or store it on a server. Use the button to prepare a copyable inquiry for review.</p>
+  </div>
+  <form id="merchantForm">
+   <h3 style="margin-top:0">Business interest form</h3>
+   <label for="business">Business name *</label><input id="business" name="business" required autocomplete="organization">
+   <label for="contact">Contact person *</label><input id="contact" name="contact" required autocomplete="name">
+   <label for="email">Business email *</label><input id="email" name="email" type="email" required autocomplete="email">
+   <label for="category">Business category</label>
+   <select id="category" name="category">
+    <option>Restaurant / food</option><option>Coffee / bakery</option><option>Retail</option><option>Automotive</option><option>Health / wellness services</option><option>Pet services</option><option>Home services</option><option>Other</option>
+   </select>
+   <label for="offer">What offer would you like to propose?</label><textarea id="offer" name="offer" placeholder="For example: 10% off selected services"></textarea>
+   <label for="conditions">Restrictions or conditions</label><textarea id="conditions" name="conditions" placeholder="Minimum purchase, eligible items, days, exclusions, or other details"></textarea>
+   <button class="btn dark" type="submit">Prepare my inquiry</button>
+   <div id="formResult" role="status" aria-live="polite"></div>
+   <p class="form-note">Submitting this form does not enroll your business or create an agreement.</p>
+  </form>
+ </div>
+</section>
+
+<section>
+ <div class="wrap faq">
+  <div class="section-head"><h2>Questions businesses may have</h2></div>
+  <details><summary>Does it cost my business anything to participate?</summary><p>The proposed model has no upfront or recurring merchant participation fee. Any final program terms will be provided in writing before a business agrees.</p></details>
+  <details><summary>Who decides what discount I offer?</summary><p>You propose and control the offer, including eligible products or services, exclusions, and redemption conditions. The details must be agreed and clearly presented before publication.</p></details>
+  <details><summary>Am I required to offer a discount on everything?</summary><p>No. Offers can be limited to selected items, services, days, or other clearly stated conditions, subject to the final participation terms.</p></details>
+  <details><summary>Am I committed indefinitely?</summary><p>The intended approach is voluntary participation with clear written procedures for changing or ending an offer. Those procedures will be set out in the final agreement.</p></details>
+  <details><summary>Is MemberShare accepting businesses now?</summary><p>This is an early website prototype. The inquiry form helps demonstrate the process, but it is not yet connected to a live enrollment system.</p></details>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap foot">
+  <div><div class="brand">MemberShare</div><p>Local businesses. Everyday savings.</p></div>
+  <div><p>Ventura-area pilot concept<br>Website prototype — not yet open for enrollment</p></div>
+ </div>
+</footer>
+<script>
+document.getElementById('merchantForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const d=new FormData(this);
+ const text=[
+ 'MEMBERSHARE — BUSINESS INQUIRY',
+ 'Business: '+d.get('business'),
+ 'Contact: '+d.get('contact'),
+ 'Email: '+d.get('email'),
+ 'Category: '+d.get('category'),
+ 'Proposed offer: '+(d.get('offer')||'Not specified'),
+ 'Conditions: '+(d.get('conditions')||'Not specified'),
+ '',
+ 'This is an expression of interest only, not an agreement.'
+ ].join('\n');
+ const box=document.getElementById('formResult');
+ box.style.display='block';
+ box.textContent='Your inquiry has been prepared below. It has NOT been sent or saved. Copy it and keep it for the MemberShare team when a submission channel is established.\n\n'+text;
+ const btn=document.createElement('button');btn.type='button';btn.className='btn outline';btn.style.marginTop='12px';btn.textContent='Copy inquiry text';
+ btn.onclick=async()=>{try{await navigator.clipboard.writeText(text);btn.textContent='Copied';}catch(err){btn.textContent='Select and copy the text above';}};
+ box.appendChild(document.createElement('br'));box.appendChild(btn);
+});
+</script>
+</body>
+</html>
