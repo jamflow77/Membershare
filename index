@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemberShare | Savings Around the World</title>
+<meta name="description" content="One membership. Savings around the world. Discover MemberShare, an international savings network connecting members and participating businesses.">
+<style>
+:root {
+  --green:#123d32;
+  --green2:#1d5947;
+  --gold:#d8b66a;
+  --cream:#f7f5ef;
+  --ink:#202c27;
+  --muted:#68756e;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.6;
+}
+header {
+  background:var(--green);
+  color:white;
+  padding:17px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.logo {
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:.4px;
+}
+.logo span {color:var(--gold)}
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {
+  color:white;
+  text-decoration:none;
+  font-size:13px;
+}
+nav a:hover {color:var(--gold)}
+.hero {
+  background:linear-gradient(130deg,#10372d,#28604b);
+  color:white;
+  padding:90px 8%;
+  text-align:center;
+}
+.hero h1 {
+  font-size:clamp(38px,7vw,65px);
+  line-height:1.1;
+  margin:0 auto 20px;
+  max-width:850px;
+}
+.hero h1 span {color:var(--gold)}
+.hero p {
+  font-size:19px;
+  max-width:680px;
+  margin:0 auto 30px;
+  color:#e7eee9;
+}
+.button {
+  display:inline-block;
+  padding:14px 25px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+  margin:5px;
+}
+.gold {background:var(--gold);color:#18382d}
+.outline {border:1px solid white;color:white}
+section {padding:65px 8%}
+.section-title {
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 38px;
+}
+.section-title h2 {
+  font-size:32px;
+  color:var(--green);
+  margin-bottom:10px;
+}
+.section-title p {color:var(--muted)}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+.panel {
+  background:var(--cream);
+  border-radius:9px;
+  padding:26px;
+}
+.panel h3 {color:var(--green);margin-top:0}
+.number {
+  color:#b18b3d;
+  font-size:28px;
+  font-weight:bold;
+}
+.dark-section {
+  background:var(--green);
+  color:white;
+}
+.dark-section h2,.dark-section h3 {color:var(--gold)}
+.dark-section p {color:#e5ece7}
+.prices {
+  text-align:center;
+  background:white;
+  border:1px solid #e4e3dc;
+  border-radius:9px;
+  padding:27px;
+}
+.price {
+  font-size:31px;
+  color:var(--green);
+  font-weight:bold;
+}
+.price small {font-size:14px;font-weight:normal}
+.note {
+  font-size:13px;
+  color:var(--muted);
+  max-width:760px;
+  margin:22px auto 0;
+  text-align:center;
+}
+form {
+  max-width:650px;
+  margin:25px auto;
+  display:grid;
+  gap:13px;
+}
+input,select,textarea {
+  width:100%;
+  padding:14px;
+  border:1px solid #d4d9d4;
+  border-radius:5px;
+  font:inherit;
+  background:white;
+}
+textarea {min-height:110px}
+button {
+  background:var(--green);
+  color:white;
+  border:0;
+  padding:15px;
+  border-radius:5px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover {background:var(--green2)}
+.center {text-align:center}
+footer {
+  background:#102b24;
+  color:white;
+  padding:35px 8%;
+  text-align:center;
+}
+footer a {color:var(--gold);text-decoration:none}
+footer p {font-size:13px;color:#d1ddd6}
+@media(max-width:600px) {
+  header {justify-content:center;text-align:center}
+  nav {justify-content:center}
+  .hero {padding:65px 6%}
+  section {padding:48px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Member<span>Share</span></div>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#membership">Membership</a>
+    <a href="#business">Businesses</a>
+    <a href="#corporate">Partners</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>One Membership.<br><span>Savings Around the World.</span></h1>
+  <p>
+    Discover a better way to save on everyday purchases.
+    MemberShare connects members with participating businesses
+    offering exclusive savings and benefits.
+  </p>
+  <a class="button gold" href="#membership">Explore Membership</a>
+  <a class="button outline" href="#business">For Businesses</a>
+</div>
+
+<section id="how">
+  <div class="section-title">
+    <h2>How MemberShare Works</h2>
+    <p>A simple idea that benefits both consumers and businesses.</p>
+  </div>
+  <div class="grid">
+    <div class="panel">
+      <div class="number">01</div>
+      <h3>Become a Member</h3>
+      <p>Choose an affordable membership priced for your country.</p>
+    </div>
+    <div class="panel">
+      <div class="number">02</div>
+      <h3>Discover Savings</h3>
+      <p>Explore participating restaurants, stores and services.</p>
+    </div>
+    <div class="panel">
+      <div class="number">03</div>
+      <h3>Save Money</h3>
+      <p>Use available offers according to each participating business's terms.</p>
+    </div>
+    <div class="panel">
+      <div class="number">04</div>
+      <h3>Keep Discovering</h3>
+      <p>Find new participating businesses and additional opportunities to save.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-title">
+    <h2>Built for a Global Community</h2>
+    <p>
+      Our vision is to connect members with businesses across
+      countries and continents, while keeping membership affordable
+      in each local market.
+    </p>
+  </div>
+  <div class="grid">
+    <div>
+      <h3>Worldwide Vision</h3>
+      <p>One membership network designed to grow across international markets.</p>
+    </div>
+    <div>
+      <h3>Local Pricing</h3>
+      <p>Membership prices adapted to local currencies and purchasing power.</p>
+    </div>
+    <div>
+      <h3>Real Value</h3>
+      <p>Offers selected to provide meaningful savings to members.</p>
+    </div>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="section-title">
+    <h2>Membership Pricing</h2>
+    <p>Our proposed founding-market prices.</p>
+  </div>
+  <div class="grid">
+    <div class="prices">
+      <h3>United States</h3>
+      <div class="price">$9.99 <small>/ month</small></div>
+      <p>$99.99 annually</p>
+    </div>
+    <div class="prices">
+      <h3>United Kingdom</h3>
+      <div class="price">£7.99 <small>/ month</small></div>
+      <p>£79.99 annually</p>
+    </div>
+    <div class="prices">
+      <h3>Canada</h3>
+      <div class="price">C$12.99 <small>/ month</small></div>
+      <p>C$129.99 annually</p>
+    </div>
+  </div>
+  <p class="note">
+    These are proposed prices, not active subscription offers.
+    Membership enrollment and payments will open when the service
+    is ready. Additional country pricing will be announced as markets launch.
+  </p>
+</section>
+
+<section id="business" class="dark-section">
+  <div class="section-title">
+    <h2>For Businesses</h2>
+    <p>
+      Reach new customers. Encourage repeat visits.
+      Give consumers another reason to choose your business.
+    </p>
+  </div>
+  <div class="grid">
+    <div>
+      <h3>No Upfront Fees</h3>
+      <p>Our proposed founding partnership does not require an upfront listing fee.</p>
+    </div>
+    <div>
+      <h3>You Choose the Offer</h3>
+      <p>Businesses determine their discounts, locations and redemption conditions.</p>
+    </div>
+    <div>
+      <h3>Grow Your Reach</h3>
+      <p>Become part of an international savings network.</p>
+    </div>
+  </div>
+  <div class="center" style="margin-top:30px">
+    <a class="button gold" href="#application">Propose a Member Offer</a>
+  </div>
+</section>
+
+<section id="application">
+  <div class="section-title">
+    <h2>Business Enrollment</h2>
+    <p>
+      Interested in participating? Tell us about your business
+      and the savings you would like to offer.
+    </p>
+  </div>
+  <form onsubmit="sendForm(event,'Business Application')">
+    <input name="business" placeholder="Business name" required>
+    <input name="contact" placeholder="Contact person's name" required>
+    <input name="email" type="email" placeholder="Business email" required>
+    <select name="country" required>
+      <option value="">Select country</option>
+      <option>United States</option>
+      <option>United Kingdom</option>
+      <option>Canada</option>
+      <option>Other</option>
+    </select>
+    <input name="category" placeholder="Business type">
+    <input name="offer" placeholder="Proposed member discount or benefit">
+    <textarea name="comments" placeholder="Additional information"></textarea>
+    <button type="submit">Submit Business Proposal</button>
+  </form>
+</section>
+
+<section id="corporate">
+  <div class="section-title">
+    <h2>Corporate Partnerships</h2>
+    <p>
+      We welcome conversations with established companies
+      interested in exploring international MemberShare partnerships.
+    </p>
+  </div>
+  <div class="panel center">
+    <h3>Let's Explore What's Possible</h3>
+    <p>
+      We are particularly interested in speaking with restaurant
+      groups, retail companies and international brands.
+    </p>
+    <a class="button gold" style="background:var(--gold)" 
+       href="mailto:membershare.ventura@gmail.com?subject=Corporate%20Partnership%20Inquiry">
+       Contact MemberShare
+    </a>
+  </div>
+</section>
+
+<section class="center">
+  <h2 style="color:var(--green)">A Better Way to Save</h2>
+  <p>MemberShare. Making everyday savings accessible around the world.</p>
+  <a class="button gold" href="mailto:membershare.ventura@gmail.com?subject=MemberShare%20Information">
+    Contact Us
+  </a>
+</section>
+</main>
+
+<footer>
+  <div class="logo">Member<span>Share</span></div>
+  <p>One Membership. Savings Around the World.</p>
+  <p><a href="mailto:membershare.ventura@gmail.com">membershare.ventura@gmail.com</a></p>
+  <p>MemberShare is developing its international network. Participating offers and membership availability will be announced as markets launch.</p>
+  <p>© 2026 MemberShare. All rights reserved.</p>
+</footer>
+
+<script>
+function sendForm(event, subject) {
+  event.preventDefault();
+  const form = event.target;
+  const data = new FormData(form);
+  let body = "";
+  for (const [key, value] of data.entries()) {
+    body += key + ": " + value + "\n";
+  }
+  const link = "mailto:membershare.ventura@gmail.com"
+    + "?subject=" + encodeURIComponent(subject)
+    + "&body=" + encodeURIComponent(body);
+  window.location.href = link;
+}
+</script>
+
+</body>
+</html>
